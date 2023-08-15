@@ -1,0 +1,14 @@
+---
+- name: Install Common Packages Centos 8 with yum
+  yum:
+    name: "{{ item }}"
+    state: present
+  when: (ansible_distribution == 'CentOS') and (ansible_distribution_major_version == '8')
+  with_items: "{{ package_name }}"
+
+- name: Install Common Packages Centos 9 with dnf
+  dnf:
+    name: "{{ item }}"
+    state: present
+  when: (ansible_distribution == 'CentOS') and (ansible_distribution_major_version == '9')
+  with_items: "{{ package_name }}"

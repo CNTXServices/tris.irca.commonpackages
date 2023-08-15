@@ -1,0 +1,7 @@
+---
+##Packages to install
+package_name:
+ - mc
+ - nc
+ - net-utils
+ - bind-utils
